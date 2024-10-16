@@ -17,3 +17,4 @@ This is a JavaFX-based BMI Calculator that allows users to input their weight an
 
 ![img.png](img.png)
 ![img_1.png](img_1.png)
+![img_2.png](img_2.png)
