@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.BmiCalculatorController">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <items>
+                    <MenuItem text="Clear" onAction="#handleClear"/>
+                    <MenuItem text="Exit" onAction="#handleExit"/>
+                </items>
+            </Menu>
+            <Menu text="Help">
+                <items>
+                    <MenuItem text="How to use" onAction="#handleHelp"/>
+                </items>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <VBox spacing="20" alignment="CENTER" padding="20">
+            <!-- Metric Section -->
+            <Label text="Weight (kg):" />
+            <TextField fx:id="weightMetric" />
+
+            <Label text="Height (cm):" />
+            <TextField fx:id="heightMetric" />
+
+            <Button text="Calculate Metric BMI" onAction="#handleCalculateMetric" />
+            <Label text="Metric BMI:" />
+            <Label fx:id="metricBmiResult" />
+
+            <!-- Space between sections -->
+            <Separator />
+
+            <!-- Imperial Section -->
+            <Label text="Weight (lbs):" />
+            <TextField fx:id="weightImperial" />
+
+            <Label text="Height (inches):" />
+            <TextField fx:id="heightImperial" />
+
+            <Button text="Calculate Imperial BMI" onAction="#handleCalculateImperial" />
+            <Label text="Imperial BMI:" />
+            <Label fx:id="imperialBmiResult" />
+        </VBox>
+    </center>
+
+</BorderPane>
