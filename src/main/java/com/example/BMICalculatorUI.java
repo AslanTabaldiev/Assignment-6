@@ -49,15 +49,15 @@ public class BMICalculatorUI {
         imperialResultLabel = new Label("Your Imperial BMI will appear here.");
 
         GridPane metricGrid = new GridPane();
-        metricGrid.setVgap(10); // Vertical gap between rows
-        metricGrid.setHgap(28); // Horizontal gap between columns
-        metricGrid.addRow(0, weightMetricLabel, weightMetricField); // Row 0: weight input
-        metricGrid.addRow(1, heightMetricLabel, heightMetricField); // Row 1: height input
-        metricGrid.add(calculateMetricButton, 1, 2); // Row 2: button under the inputs
-        metricGrid.add(metricResultLabel, 1, 3); // Row 3: result under the button
+        metricGrid.setVgap(10);
+        metricGrid.setHgap(28);
+        metricGrid.addRow(0, weightMetricLabel, weightMetricField);
+        metricGrid.addRow(1, heightMetricLabel, heightMetricField);
+        metricGrid.add(calculateMetricButton, 1, 2);
+        metricGrid.add(metricResultLabel, 1, 3);
 
         GridPane imperialGrid = new GridPane();
-        imperialGrid.setVgap(10); // Same layout for imperial units
+        imperialGrid.setVgap(10);
         imperialGrid.setHgap(10);
         imperialGrid.addRow(0, weightImperialLabel, weightImperialField);
         imperialGrid.addRow(1, heightImperialLabel, heightImperialField);
@@ -101,13 +101,5 @@ public class BMICalculatorUI {
         else if (bmi < 24.9) return "Normal";
         else if (bmi < 29.9) return "Overweight";
         else return "Obese";
-    }
-
-    public static void clearFields(TextField weightMetric, TextField heightMetric,
-                                   TextField weightImperial, TextField heightImperial) {
-        weightMetric.clear();
-        heightMetric.clear();
-        weightImperial.clear();
-        heightImperial.clear();
     }
 }
